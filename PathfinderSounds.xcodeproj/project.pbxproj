@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5F2AEDD1C63A57600948FA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2AEDC1C63A57600948FA1 /* AppDelegate.swift */; };
+		B5F2AEDF1C63A57600948FA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2AEDE1C63A57600948FA1 /* ViewController.swift */; };
+		B5F2AEE11C63A57600948FA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5F2AEE01C63A57600948FA1 /* Assets.xcassets */; };
+		B5F2AEE41C63A57600948FA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F2AEE21C63A57600948FA1 /* Main.storyboard */; };
+		B5F2AEEF1C63A57600948FA1 /* PathfinderSoundsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2AEEE1C63A57600948FA1 /* PathfinderSoundsTests.swift */; };
+		B5F2AEFA1C63A57700948FA1 /* PathfinderSoundsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F2AEF91C63A57700948FA1 /* PathfinderSoundsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5F2AEEB1C63A57600948FA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5F2AED11C63A57600948FA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5F2AED81C63A57600948FA1;
+			remoteInfo = PathfinderSounds;
+		};
+		B5F2AEF61C63A57700948FA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5F2AED11C63A57600948FA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5F2AED81C63A57600948FA1;
+			remoteInfo = PathfinderSounds;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5F2AED91C63A57600948FA1 /* PathfinderSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathfinderSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F2AEDC1C63A57600948FA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5F2AEDE1C63A57600948FA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5F2AEE01C63A57600948FA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5F2AEE31C63A57600948FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5F2AEE51C63A57600948FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5F2AEEA1C63A57600948FA1 /* PathfinderSoundsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathfinderSoundsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F2AEEE1C63A57600948FA1 /* PathfinderSoundsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathfinderSoundsTests.swift; sourceTree = "<group>"; };
+		B5F2AEF01C63A57600948FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5F2AEF51C63A57700948FA1 /* PathfinderSoundsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathfinderSoundsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F2AEF91C63A57700948FA1 /* PathfinderSoundsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathfinderSoundsUITests.swift; sourceTree = "<group>"; };
+		B5F2AEFB1C63A57700948FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5F2AED61C63A57600948FA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5F2AEE71C63A57600948FA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5F2AEF21C63A57700948FA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5F2AED01C63A57600948FA1 = {
+			isa = PBXGroup;
+			children = (
+				B5F2AEDB1C63A57600948FA1 /* PathfinderSounds */,
+				B5F2AEED1C63A57600948FA1 /* PathfinderSoundsTests */,
+				B5F2AEF81C63A57700948FA1 /* PathfinderSoundsUITests */,
+				B5F2AEDA1C63A57600948FA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5F2AEDA1C63A57600948FA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5F2AED91C63A57600948FA1 /* PathfinderSounds.app */,
+				B5F2AEEA1C63A57600948FA1 /* PathfinderSoundsTests.xctest */,
+				B5F2AEF51C63A57700948FA1 /* PathfinderSoundsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5F2AEDB1C63A57600948FA1 /* PathfinderSounds */ = {
+			isa = PBXGroup;
+			children = (
+				B5F2AEDC1C63A57600948FA1 /* AppDelegate.swift */,
+				B5F2AEDE1C63A57600948FA1 /* ViewController.swift */,
+				B5F2AEE01C63A57600948FA1 /* Assets.xcassets */,
+				B5F2AEE21C63A57600948FA1 /* Main.storyboard */,
+				B5F2AEE51C63A57600948FA1 /* Info.plist */,
+			);
+			path = PathfinderSounds;
+			sourceTree = "<group>";
+		};
+		B5F2AEED1C63A57600948FA1 /* PathfinderSoundsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5F2AEEE1C63A57600948FA1 /* PathfinderSoundsTests.swift */,
+				B5F2AEF01C63A57600948FA1 /* Info.plist */,
+			);
+			path = PathfinderSoundsTests;
+			sourceTree = "<group>";
+		};
+		B5F2AEF81C63A57700948FA1 /* PathfinderSoundsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5F2AEF91C63A57700948FA1 /* PathfinderSoundsUITests.swift */,
+				B5F2AEFB1C63A57700948FA1 /* Info.plist */,
+			);
+			path = PathfinderSoundsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5F2AED81C63A57600948FA1 /* PathfinderSounds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5F2AEFE1C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSounds" */;
+			buildPhases = (
+				B5F2AED51C63A57600948FA1 /* Sources */,
+				B5F2AED61C63A57600948FA1 /* Frameworks */,
+				B5F2AED71C63A57600948FA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PathfinderSounds;
+			productName = PathfinderSounds;
+			productReference = B5F2AED91C63A57600948FA1 /* PathfinderSounds.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5F2AEE91C63A57600948FA1 /* PathfinderSoundsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5F2AF011C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSoundsTests" */;
+			buildPhases = (
+				B5F2AEE61C63A57600948FA1 /* Sources */,
+				B5F2AEE71C63A57600948FA1 /* Frameworks */,
+				B5F2AEE81C63A57600948FA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5F2AEEC1C63A57600948FA1 /* PBXTargetDependency */,
+			);
+			name = PathfinderSoundsTests;
+			productName = PathfinderSoundsTests;
+			productReference = B5F2AEEA1C63A57600948FA1 /* PathfinderSoundsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5F2AEF41C63A57700948FA1 /* PathfinderSoundsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5F2AF041C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSoundsUITests" */;
+			buildPhases = (
+				B5F2AEF11C63A57700948FA1 /* Sources */,
+				B5F2AEF21C63A57700948FA1 /* Frameworks */,
+				B5F2AEF31C63A57700948FA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5F2AEF71C63A57700948FA1 /* PBXTargetDependency */,
+			);
+			name = PathfinderSoundsUITests;
+			productName = PathfinderSoundsUITests;
+			productReference = B5F2AEF51C63A57700948FA1 /* PathfinderSoundsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5F2AED11C63A57600948FA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Benjamin Weigang";
+				TargetAttributes = {
+					B5F2AED81C63A57600948FA1 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					B5F2AEE91C63A57600948FA1 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = B5F2AED81C63A57600948FA1;
+					};
+					B5F2AEF41C63A57700948FA1 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = B5F2AED81C63A57600948FA1;
+					};
+				};
+			};
+			buildConfigurationList = B5F2AED41C63A57600948FA1 /* Build configuration list for PBXProject "PathfinderSounds" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5F2AED01C63A57600948FA1;
+			productRefGroup = B5F2AEDA1C63A57600948FA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5F2AED81C63A57600948FA1 /* PathfinderSounds */,
+				B5F2AEE91C63A57600948FA1 /* PathfinderSoundsTests */,
+				B5F2AEF41C63A57700948FA1 /* PathfinderSoundsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5F2AED71C63A57600948FA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F2AEE11C63A57600948FA1 /* Assets.xcassets in Resources */,
+				B5F2AEE41C63A57600948FA1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5F2AEE81C63A57600948FA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5F2AEF31C63A57700948FA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5F2AED51C63A57600948FA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F2AEDF1C63A57600948FA1 /* ViewController.swift in Sources */,
+				B5F2AEDD1C63A57600948FA1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5F2AEE61C63A57600948FA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F2AEEF1C63A57600948FA1 /* PathfinderSoundsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5F2AEF11C63A57700948FA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F2AEFA1C63A57700948FA1 /* PathfinderSoundsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5F2AEEC1C63A57600948FA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5F2AED81C63A57600948FA1 /* PathfinderSounds */;
+			targetProxy = B5F2AEEB1C63A57600948FA1 /* PBXContainerItemProxy */;
+		};
+		B5F2AEF71C63A57700948FA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5F2AED81C63A57600948FA1 /* PathfinderSounds */;
+			targetProxy = B5F2AEF61C63A57700948FA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5F2AEE21C63A57600948FA1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5F2AEE31C63A57600948FA1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5F2AEFC1C63A57700948FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5F2AEFD1C63A57700948FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B5F2AEFF1C63A57700948FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PathfinderSounds/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSounds;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B5F2AF001C63A57700948FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PathfinderSounds/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSounds;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B5F2AF021C63A57700948FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PathfinderSoundsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSoundsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PathfinderSounds.app/Contents/MacOS/PathfinderSounds";
+			};
+			name = Debug;
+		};
+		B5F2AF031C63A57700948FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PathfinderSoundsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSoundsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PathfinderSounds.app/Contents/MacOS/PathfinderSounds";
+			};
+			name = Release;
+		};
+		B5F2AF051C63A57700948FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PathfinderSoundsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSoundsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PathfinderSounds;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B5F2AF061C63A57700948FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PathfinderSoundsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSoundsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PathfinderSounds;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5F2AED41C63A57600948FA1 /* Build configuration list for PBXProject "PathfinderSounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5F2AEFC1C63A57700948FA1 /* Debug */,
+				B5F2AEFD1C63A57700948FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5F2AEFE1C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5F2AEFF1C63A57700948FA1 /* Debug */,
+				B5F2AF001C63A57700948FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B5F2AF011C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSoundsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5F2AF021C63A57700948FA1 /* Debug */,
+				B5F2AF031C63A57700948FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B5F2AF041C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSoundsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5F2AF051C63A57700948FA1 /* Debug */,
+				B5F2AF061C63A57700948FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5F2AED11C63A57600948FA1 /* Project object */;
+}
