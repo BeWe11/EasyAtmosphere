@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import PathfinderSounds
+@testable import EasyAtmosphere
 
 class PathfinderSoundsTests: XCTestCase {
     

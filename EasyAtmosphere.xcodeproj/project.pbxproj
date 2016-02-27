@@ -36,16 +36,16 @@
 /* Begin PBXFileReference section */
 		B5775ABE1C656228003FE321 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B5775AC31C656AB2003FE321 /* SoundsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsModel.swift; sourceTree = "<group>"; };
-		B588E2ED1C63F17E00DDFD61 /* PathfinderSounds-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PathfinderSounds-Bridging-Header.h"; sourceTree = "<group>"; };
-		B5F2AED91C63A57600948FA1 /* PathfinderSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathfinderSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B588E2ED1C63F17E00DDFD61 /* EasyAtmosphere-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyAtmosphere-Bridging-Header.h"; sourceTree = "<group>"; };
+		B5F2AED91C63A57600948FA1 /* EasyAtmosphere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyAtmosphere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F2AEDC1C63A57600948FA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5F2AEDE1C63A57600948FA1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B5F2AEE31C63A57600948FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5F2AEE51C63A57600948FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5F2AEEA1C63A57600948FA1 /* PathfinderSoundsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathfinderSoundsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F2AEEA1C63A57600948FA1 /* EasyAtmosphere.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyAtmosphere.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F2AEEE1C63A57600948FA1 /* PathfinderSoundsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathfinderSoundsTests.swift; sourceTree = "<group>"; };
 		B5F2AEF01C63A57600948FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5F2AEF51C63A57700948FA1 /* PathfinderSoundsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathfinderSoundsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F2AEF51C63A57700948FA1 /* EasyAtmosphere.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyAtmosphere.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F2AEF91C63A57700948FA1 /* PathfinderSoundsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathfinderSoundsUITests.swift; sourceTree = "<group>"; };
 		B5F2AEFB1C63A57700948FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,9 +78,9 @@
 		B5F2AED01C63A57600948FA1 = {
 			isa = PBXGroup;
 			children = (
-				B5F2AEDB1C63A57600948FA1 /* PathfinderSounds */,
-				B5F2AEED1C63A57600948FA1 /* PathfinderSoundsTests */,
-				B5F2AEF81C63A57700948FA1 /* PathfinderSoundsUITests */,
+				B5F2AEDB1C63A57600948FA1 /* EasyAtmosphere */,
+				B5F2AEED1C63A57600948FA1 /* EasyAtmosphereTests */,
+				B5F2AEF81C63A57700948FA1 /* EasyAtmosphereUITests */,
 				B5F2AEDA1C63A57600948FA1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,14 +88,14 @@
 		B5F2AEDA1C63A57600948FA1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5F2AED91C63A57600948FA1 /* PathfinderSounds.app */,
-				B5F2AEEA1C63A57600948FA1 /* PathfinderSoundsTests.xctest */,
-				B5F2AEF51C63A57700948FA1 /* PathfinderSoundsUITests.xctest */,
+				B5F2AED91C63A57600948FA1 /* EasyAtmosphere.app */,
+				B5F2AEEA1C63A57600948FA1 /* EasyAtmosphere.xctest */,
+				B5F2AEF51C63A57700948FA1 /* EasyAtmosphere.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B5F2AEDB1C63A57600948FA1 /* PathfinderSounds */ = {
+		B5F2AEDB1C63A57600948FA1 /* EasyAtmosphere */ = {
 			isa = PBXGroup;
 			children = (
 				B5F2AEDC1C63A57600948FA1 /* AppDelegate.swift */,
@@ -104,35 +104,35 @@
 				B5775AC31C656AB2003FE321 /* SoundsModel.swift */,
 				B5F2AEE21C63A57600948FA1 /* Main.storyboard */,
 				B5F2AEE51C63A57600948FA1 /* Info.plist */,
-				B588E2ED1C63F17E00DDFD61 /* PathfinderSounds-Bridging-Header.h */,
+				B588E2ED1C63F17E00DDFD61 /* EasyAtmosphere-Bridging-Header.h */,
 			);
-			path = PathfinderSounds;
+			path = EasyAtmosphere;
 			sourceTree = "<group>";
 		};
-		B5F2AEED1C63A57600948FA1 /* PathfinderSoundsTests */ = {
+		B5F2AEED1C63A57600948FA1 /* EasyAtmosphereTests */ = {
 			isa = PBXGroup;
 			children = (
 				B5F2AEEE1C63A57600948FA1 /* PathfinderSoundsTests.swift */,
 				B5F2AEF01C63A57600948FA1 /* Info.plist */,
 			);
-			path = PathfinderSoundsTests;
+			path = EasyAtmosphereTests;
 			sourceTree = "<group>";
 		};
-		B5F2AEF81C63A57700948FA1 /* PathfinderSoundsUITests */ = {
+		B5F2AEF81C63A57700948FA1 /* EasyAtmosphereUITests */ = {
 			isa = PBXGroup;
 			children = (
 				B5F2AEF91C63A57700948FA1 /* PathfinderSoundsUITests.swift */,
 				B5F2AEFB1C63A57700948FA1 /* Info.plist */,
 			);
-			path = PathfinderSoundsUITests;
+			path = EasyAtmosphereUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B5F2AED81C63A57600948FA1 /* PathfinderSounds */ = {
+		B5F2AED81C63A57600948FA1 /* EasyAtmosphere */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5F2AEFE1C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSounds" */;
+			buildConfigurationList = B5F2AEFE1C63A57700948FA1 /* Build configuration list for PBXNativeTarget "EasyAtmosphere" */;
 			buildPhases = (
 				B5F2AED51C63A57600948FA1 /* Sources */,
 				B5F2AED61C63A57600948FA1 /* Frameworks */,
@@ -142,14 +142,14 @@
 			);
 			dependencies = (
 			);
-			name = PathfinderSounds;
+			name = EasyAtmosphere;
 			productName = PathfinderSounds;
-			productReference = B5F2AED91C63A57600948FA1 /* PathfinderSounds.app */;
+			productReference = B5F2AED91C63A57600948FA1 /* EasyAtmosphere.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B5F2AEE91C63A57600948FA1 /* PathfinderSoundsTests */ = {
+		B5F2AEE91C63A57600948FA1 /* EasyAtmosphereTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5F2AF011C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSoundsTests" */;
+			buildConfigurationList = B5F2AF011C63A57700948FA1 /* Build configuration list for PBXNativeTarget "EasyAtmosphereTests" */;
 			buildPhases = (
 				B5F2AEE61C63A57600948FA1 /* Sources */,
 				B5F2AEE71C63A57600948FA1 /* Frameworks */,
@@ -160,14 +160,14 @@
 			dependencies = (
 				B5F2AEEC1C63A57600948FA1 /* PBXTargetDependency */,
 			);
-			name = PathfinderSoundsTests;
+			name = EasyAtmosphereTests;
 			productName = PathfinderSoundsTests;
-			productReference = B5F2AEEA1C63A57600948FA1 /* PathfinderSoundsTests.xctest */;
+			productReference = B5F2AEEA1C63A57600948FA1 /* EasyAtmosphere.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B5F2AEF41C63A57700948FA1 /* PathfinderSoundsUITests */ = {
+		B5F2AEF41C63A57700948FA1 /* EasyAtmosphereUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5F2AF041C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSoundsUITests" */;
+			buildConfigurationList = B5F2AF041C63A57700948FA1 /* Build configuration list for PBXNativeTarget "EasyAtmosphereUITests" */;
 			buildPhases = (
 				B5F2AEF11C63A57700948FA1 /* Sources */,
 				B5F2AEF21C63A57700948FA1 /* Frameworks */,
@@ -178,9 +178,9 @@
 			dependencies = (
 				B5F2AEF71C63A57700948FA1 /* PBXTargetDependency */,
 			);
-			name = PathfinderSoundsUITests;
+			name = EasyAtmosphereUITests;
 			productName = PathfinderSoundsUITests;
-			productReference = B5F2AEF51C63A57700948FA1 /* PathfinderSoundsUITests.xctest */;
+			productReference = B5F2AEF51C63A57700948FA1 /* EasyAtmosphere.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B5F2AED41C63A57600948FA1 /* Build configuration list for PBXProject "PathfinderSounds" */;
+			buildConfigurationList = B5F2AED41C63A57600948FA1 /* Build configuration list for PBXProject "EasyAtmosphere" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -219,9 +219,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B5F2AED81C63A57600948FA1 /* PathfinderSounds */,
-				B5F2AEE91C63A57600948FA1 /* PathfinderSoundsTests */,
-				B5F2AEF41C63A57700948FA1 /* PathfinderSoundsUITests */,
+				B5F2AED81C63A57600948FA1 /* EasyAtmosphere */,
+				B5F2AEE91C63A57600948FA1 /* EasyAtmosphereTests */,
+				B5F2AEF41C63A57700948FA1 /* EasyAtmosphereUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -284,12 +284,12 @@
 /* Begin PBXTargetDependency section */
 		B5F2AEEC1C63A57600948FA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B5F2AED81C63A57600948FA1 /* PathfinderSounds */;
+			target = B5F2AED81C63A57600948FA1 /* EasyAtmosphere */;
 			targetProxy = B5F2AEEB1C63A57600948FA1 /* PBXContainerItemProxy */;
 		};
 		B5F2AEF71C63A57700948FA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B5F2AED81C63A57600948FA1 /* PathfinderSounds */;
+			target = B5F2AED81C63A57600948FA1 /* EasyAtmosphere */;
 			targetProxy = B5F2AEF61C63A57700948FA1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -392,11 +392,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = PathfinderSounds/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EasyAtmosphere/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSounds;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PathfinderSounds/PathfinderSounds-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = BeWe.EasyAtmosphere;
+				PRODUCT_NAME = EasyAtmosphere;
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyAtmosphere/EasyAtmosphere-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -407,11 +407,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = PathfinderSounds/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EasyAtmosphere/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSounds;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PathfinderSounds/PathfinderSounds-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = BeWe.EasyAtmosphere;
+				PRODUCT_NAME = EasyAtmosphere;
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyAtmosphere/EasyAtmosphere-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -423,8 +423,8 @@
 				INFOPLIST_FILE = PathfinderSoundsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSoundsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PathfinderSounds.app/Contents/MacOS/PathfinderSounds";
+				PRODUCT_NAME = EasyAtmosphere;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyAtmosphere.app/Contents/MacOS/EasyAtmosphere";
 			};
 			name = Debug;
 		};
@@ -436,8 +436,8 @@
 				INFOPLIST_FILE = PathfinderSoundsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSoundsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PathfinderSounds.app/Contents/MacOS/PathfinderSounds";
+				PRODUCT_NAME = EasyAtmosphere;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyAtmosphere.app/Contents/MacOS/EasyAtmosphere";
 			};
 			name = Release;
 		};
@@ -448,7 +448,7 @@
 				INFOPLIST_FILE = PathfinderSoundsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSoundsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EasyAtmosphere;
 				TEST_TARGET_NAME = PathfinderSounds;
 				USES_XCTRUNNER = YES;
 			};
@@ -461,7 +461,7 @@
 				INFOPLIST_FILE = PathfinderSoundsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeWe.PathfinderSoundsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EasyAtmosphere;
 				TEST_TARGET_NAME = PathfinderSounds;
 				USES_XCTRUNNER = YES;
 			};
@@ -470,7 +470,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B5F2AED41C63A57600948FA1 /* Build configuration list for PBXProject "PathfinderSounds" */ = {
+		B5F2AED41C63A57600948FA1 /* Build configuration list for PBXProject "EasyAtmosphere" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5F2AEFC1C63A57700948FA1 /* Debug */,
@@ -479,7 +479,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5F2AEFE1C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSounds" */ = {
+		B5F2AEFE1C63A57700948FA1 /* Build configuration list for PBXNativeTarget "EasyAtmosphere" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5F2AEFF1C63A57700948FA1 /* Debug */,
@@ -488,7 +488,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5F2AF011C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSoundsTests" */ = {
+		B5F2AF011C63A57700948FA1 /* Build configuration list for PBXNativeTarget "EasyAtmosphereTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5F2AF021C63A57700948FA1 /* Debug */,
@@ -497,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5F2AF041C63A57700948FA1 /* Build configuration list for PBXNativeTarget "PathfinderSoundsUITests" */ = {
+		B5F2AF041C63A57700948FA1 /* Build configuration list for PBXNativeTarget "EasyAtmosphereUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5F2AF051C63A57700948FA1 /* Debug */,

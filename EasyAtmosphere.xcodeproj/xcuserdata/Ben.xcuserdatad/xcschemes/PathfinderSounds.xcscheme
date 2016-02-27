@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B5F2AED81C63A57600948FA1"
-               BuildableName = "PathfinderSounds.app"
-               BlueprintName = "PathfinderSounds"
-               ReferencedContainer = "container:PathfinderSounds.xcodeproj">
+               BuildableName = "EasyAtmosphere.app"
+               BlueprintName = "EasyAtmosphere"
+               ReferencedContainer = "container:EasyAtmosphere.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B5F2AEE91C63A57600948FA1"
-               BuildableName = "PathfinderSoundsTests.xctest"
-               BlueprintName = "PathfinderSoundsTests"
-               ReferencedContainer = "container:PathfinderSounds.xcodeproj">
+               BuildableName = "EasyAtmosphere.xctest"
+               BlueprintName = "EasyAtmosphereTests"
+               ReferencedContainer = "container:EasyAtmosphere.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B5F2AEF41C63A57700948FA1"
-               BuildableName = "PathfinderSoundsUITests.xctest"
-               BlueprintName = "PathfinderSoundsUITests"
-               ReferencedContainer = "container:PathfinderSounds.xcodeproj">
+               BuildableName = "EasyAtmosphere.xctest"
+               BlueprintName = "EasyAtmosphereUITests"
+               ReferencedContainer = "container:EasyAtmosphere.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B5F2AED81C63A57600948FA1"
-            BuildableName = "PathfinderSounds.app"
-            BlueprintName = "PathfinderSounds"
-            ReferencedContainer = "container:PathfinderSounds.xcodeproj">
+            BuildableName = "EasyAtmosphere.app"
+            BlueprintName = "EasyAtmosphere"
+            ReferencedContainer = "container:EasyAtmosphere.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B5F2AED81C63A57600948FA1"
-            BuildableName = "PathfinderSounds.app"
-            BlueprintName = "PathfinderSounds"
-            ReferencedContainer = "container:PathfinderSounds.xcodeproj">
+            BuildableName = "EasyAtmosphere.app"
+            BlueprintName = "EasyAtmosphere"
+            ReferencedContainer = "container:EasyAtmosphere.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B5F2AED81C63A57600948FA1"
-            BuildableName = "PathfinderSounds.app"
-            BlueprintName = "PathfinderSounds"
-            ReferencedContainer = "container:PathfinderSounds.xcodeproj">
+            BuildableName = "EasyAtmosphere.app"
+            BlueprintName = "EasyAtmosphere"
+            ReferencedContainer = "container:EasyAtmosphere.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

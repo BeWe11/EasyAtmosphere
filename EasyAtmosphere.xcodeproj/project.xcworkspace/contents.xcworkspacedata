@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PathfinderSounds.xcodeproj">
+      location = "self:/Users/Ben/Projects/XCode/PathfinderSounds/EasyAtmosphere.xcodeproj">
    </FileRef>
 </Workspace>
