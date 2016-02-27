@@ -24,15 +24,11 @@ class MainViewController: NSViewController {
         
         // TestURL
         let configURL = NSURL(fileURLWithPath: NSString(string: "~/Downloads/config.txt").stringByExpandingTildeInPath)
-        Swift.print(configURL)
         
         self.model = SoundsModel(configURL: configURL)
         
-        for (index, sound) in self.model.sounds.enumerate() {
-            let entryView = createEntryView(sound.name, volume: sound.volume, index: index)
-            stackView.addArrangedSubview(entryView)
-            let con: CGFloat = 1.0
-            createConstraints2(entryView, outerView: stackView, top: con, bottom: con, left: con, right: con)
+        for sound in self.model.sounds {
+            addEntryView(sound)
         }
     }
 
@@ -43,38 +39,79 @@ class MainViewController: NSViewController {
     }
     
     
-    func slid(sender: AnyObject) {
-        model.sounds[sender.tag()].volume = Float(sender.stringValue)!
+    func changeVolume(sender: AnyObject) {
+        model.sounds[sender.tag()].volume = sender.floatValue
     }
     
-    func pressed(sender: AnyObject) {
+    func changeReverbMix(sender: AnyObject) {
+        model.sounds[sender.tag()].reverbMix = (sender.floatValue + 50) % 100
+    }
+    
+    func changeReverbPreset(sender: AnyObject) {
+        model.sounds[sender.tag()].reverbPreset = sender.indexOfSelectedItem()
+    }
+    
+    func playPause(sender: AnyObject) {
         model.sounds[sender.tag()].playPause()
     }
     
-    func createEntryView(name: String, volume: Float, index: Int) -> NSStackView {
+    func addEntryView(sound: Sound) {
+        let id = sound.id
+        let name = sound.name
+        let volume = sound.volume
+        let pan = sound.pan
+        let reverbMix = sound.reverbMix
+        let reverbPreset = sound.reverbPreset
+        
         let entryView =  NSStackView()
         entryView.distribution = .FillEqually
         entryView.alignment = .CenterX
         entryView.orientation = .Horizontal
         
+        // Play button
         let button = NSButton()
         button.title = name
         button.target = self
-        button.action = "pressed:"
-        button.tag = index
+        button.action = "playPause:"
+        button.tag = id
         button.bezelStyle = NSBezelStyle.RoundedBezelStyle
         entryView.addArrangedSubview(button)
         
-        let slider = NSSlider()
-        slider.stringValue = String(volume)
-        slider.continuous = true
-        slider.target = self
-        slider.action = "slid:"
-        slider.tag = index
-        self.slid(slider)
-        entryView.addArrangedSubview(slider)
+        // Volume slider
+        let volumeSlider = NSSlider()
+        volumeSlider.stringValue = String(volume)
+        volumeSlider.continuous = true
+        volumeSlider.target = self
+        volumeSlider.action = "changeVolume:"
+        volumeSlider.tag = id
+        volumeSlider.floatValue = volume
+        entryView.addArrangedSubview(volumeSlider)
         
-        return entryView
+        // Reverb slider
+        let reverbSlider = NSSlider()
+        reverbSlider.sliderType = NSSliderType.CircularSlider
+        reverbSlider.minValue = 0
+        reverbSlider.maxValue = 100
+        reverbSlider.continuous = true
+        reverbSlider.target = self
+        reverbSlider.action = "changeReverbMix:"
+        reverbSlider.tag = id
+        reverbSlider.floatValue = reverbMix
+        entryView.addArrangedSubview(reverbSlider)
+        
+        // Reverb preset pop up button
+        let reverbPresetPopUpButton = NSPopUpButton()
+        reverbPresetPopUpButton.removeAllItems()
+        reverbPresetPopUpButton.addItemsWithTitles(model.reverbPresets)
+        reverbPresetPopUpButton.selectItemAtIndex(reverbPreset)
+        reverbPresetPopUpButton.target = self
+        reverbPresetPopUpButton.action = "changeReverbPreset:"
+        reverbPresetPopUpButton.tag = id
+        entryView.addArrangedSubview(reverbPresetPopUpButton)
+        
+        stackView.addArrangedSubview(entryView)
+        let con: CGFloat = 1.0
+        createConstraints2(entryView, outerView: stackView, top: con, bottom: con, left: con, right: con)
     }
     
     func createConstraints(view: NSView, top: Int, bottom: Int, left: Int, right: Int) {
@@ -143,10 +180,15 @@ class MainViewController: NSViewController {
 
 extension MainViewController: MainViewDelegate {
     func didPressKey(key: String) {
-        guard let tag = model.hotKeyTags[key] else {
+        guard let id = model.idByHotkey[key] else {
             return
         }
-        model.sounds[tag].playPause()
+        model.sounds[id].playPause()
+    }
+    
+    func addSoundFromURL(fileURL: NSURL) {
+        let sound = model.addSoundFromURL(fileURL)
+        addEntryView(sound)
     }
 }
 
