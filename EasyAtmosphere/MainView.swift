@@ -22,7 +22,6 @@ class MainView: NSView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-//        let draggedTypes = ["NSTypedFilenamesPboardType:wav"]
         let draggedTypes = ["NSFilenamesPboardType"]
         registerForDraggedTypes(draggedTypes)
         Swift.print(self.registeredDraggedTypes)

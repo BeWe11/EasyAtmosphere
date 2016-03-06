@@ -12,6 +12,7 @@ import Cocoa
 class MainViewController: NSViewController {
     
     var model: SoundsModel!
+    var chooseHotkeyId = -1
     
     @IBOutlet weak var stackView: NSStackView!
     
@@ -43,8 +44,22 @@ class MainViewController: NSViewController {
         model.sounds[sender.tag()].volume = sender.floatValue
     }
     
+    func changeHotkey(sender: AnyObject) {
+        chooseHotkeyId = sender.tag()
+    }
+    
+    func changePan(sender: AnyObject) {
+        let newPan = ((sender.floatValue + 50) % 100 - 50) / 50
+        let sound = model.sounds[sender.tag()]
+        sound.pan = newPan
+        Swift.print(sound.pan)
+    }
+    
     func changeReverbMix(sender: AnyObject) {
-        model.sounds[sender.tag()].reverbMix = (sender.floatValue + 50) % 100
+        let newReverbMix = (sender.floatValue + 50) % 100
+        let sound = model.sounds[sender.tag()]
+        sound.reverbMix = newReverbMix
+        Swift.print(sound.reverbMix)
     }
     
     func changeReverbPreset(sender: AnyObject) {
@@ -58,6 +73,7 @@ class MainViewController: NSViewController {
     func addEntryView(sound: Sound) {
         let id = sound.id
         let name = sound.name
+        let hotkey = sound.hotkey
         let volume = sound.volume
         let pan = sound.pan
         let reverbMix = sound.reverbMix
@@ -68,18 +84,34 @@ class MainViewController: NSViewController {
         entryView.alignment = .CenterX
         entryView.orientation = .Horizontal
         
-        // Play button
-        let button = NSButton()
-        button.title = name
-        button.target = self
-        button.action = "playPause:"
-        button.tag = id
-        button.bezelStyle = NSBezelStyle.RoundedBezelStyle
-        entryView.addArrangedSubview(button)
+        // Play pause button
+        let playPauseButton = NSButton()
+        playPauseButton.title = name
+        playPauseButton.target = self
+        playPauseButton.action = "playPause:"
+        playPauseButton.tag = id
+        playPauseButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        entryView.addArrangedSubview(playPauseButton)
+        
+        // Hotkey button
+        let hotkeyButton = NSButton()
+        hotkeyButton.title = hotkey
+        hotkeyButton.target = self
+        hotkeyButton.action = "changeHotkey:"
+        hotkeyButton.tag = id
+        hotkeyButton.bezelStyle = NSBezelStyle.InlineBezelStyle
+        entryView.addArrangedSubview(hotkeyButton)
+        
+        // Pan slider
+        let panSlider = ClippingCircularSlider()
+        panSlider.target = self
+        panSlider.action = "changePan:"
+        panSlider.tag = id
+        panSlider.floatValue = pan
+        entryView.addArrangedSubview(panSlider)
         
         // Volume slider
         let volumeSlider = NSSlider()
-        volumeSlider.stringValue = String(volume)
         volumeSlider.continuous = true
         volumeSlider.target = self
         volumeSlider.action = "changeVolume:"
@@ -88,11 +120,7 @@ class MainViewController: NSViewController {
         entryView.addArrangedSubview(volumeSlider)
         
         // Reverb slider
-        let reverbSlider = NSSlider()
-        reverbSlider.sliderType = NSSliderType.CircularSlider
-        reverbSlider.minValue = 0
-        reverbSlider.maxValue = 100
-        reverbSlider.continuous = true
+        let reverbSlider = ClippingCircularSlider()
         reverbSlider.target = self
         reverbSlider.action = "changeReverbMix:"
         reverbSlider.tag = id
@@ -174,16 +202,39 @@ class MainViewController: NSViewController {
         
         outerView.addConstraints(constraints)
     }
+    
+    func updateHotkey(id: Int, hotkey: String) {
+        // Remove previous occurence of hotkey
+        if let previousReferencedId = model.idByHotkey[hotkey] {
+            model.sounds[previousReferencedId].hotkey = ""
+            let previousReferencedButton = stackView.subviews[previousReferencedId].subviews[1] as! NSButton
+            previousReferencedButton.title = " "
+        }
+        
+        let sound = model.sounds[id]
+        let previousHotkey = sound.hotkey
+        model.idByHotkey.removeValueForKey(previousHotkey)
+        sound.hotkey = hotkey
+        model.idByHotkey[hotkey] = id
+        
+        let button = stackView.subviews[id].subviews[1] as! NSButton
+        button.title = hotkey
+    }
 
 }
 
 
 extension MainViewController: MainViewDelegate {
     func didPressKey(key: String) {
-        guard let id = model.idByHotkey[key] else {
-            return
+        if chooseHotkeyId != -1 {
+            updateHotkey(chooseHotkeyId, hotkey:key)
+            chooseHotkeyId = -1
+        } else {
+            guard let id = model.idByHotkey[key] else {
+                return
+            }
+            model.sounds[id].playPause()
         }
-        model.sounds[id].playPause()
     }
     
     func addSoundFromURL(fileURL: NSURL) {
@@ -191,4 +242,3 @@ extension MainViewController: MainViewDelegate {
         addEntryView(sound)
     }
 }
-

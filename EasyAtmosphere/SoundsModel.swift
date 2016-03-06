@@ -13,7 +13,7 @@ class Sound {
     
     var id: Int
     var name: String
-    var hotKey: String
+    var hotkey: String
     var player = AVAudioPlayerNode()
     var engine = AVAudioEngine()
     var reverb = AVAudioUnitReverb()
@@ -53,10 +53,10 @@ class Sound {
         }
     }
     
-    init(id: Int, fileURL: NSURL, hotKey: String, startVolume: Float, startPan: Float, startReverbPreset: Int, startReverbMix: Float) {
+    init(id: Int, fileURL: NSURL, hotkey: String, startVolume: Float, startPan: Float, startReverbPreset: Int, startReverbMix: Float) {
         self.id = id
         self.name = (fileURL.URLByDeletingPathExtension?.lastPathComponent)! // Better unwrapping
-        self.hotKey = hotKey // Maybe make optional
+        self.hotkey = hotkey // Maybe make optional
         self.reverbPreset = startReverbPreset
         setupAudio(fileURL)
         self.volume = startVolume
@@ -126,12 +126,12 @@ class SoundsModel {
         for (index, entry) in entries.enumerate() {
             self.sounds.append(Sound(id: index,
                                      fileURL: entry["fileURL"] as! NSURL,
-                                     hotKey: entry["hotKey"] as! String,
+                                     hotkey: entry["hotkey"] as! String,
                                      startVolume: entry["startVolume"] as! Float,
                                      startPan: entry["startPan"] as! Float,
                                      startReverbPreset: entry["startReverbPreset"] as! Int,
                                      startReverbMix: entry["startReverbMix"] as! Float))
-            self.idByHotkey[entry["hotKey"] as! String] = index
+            self.idByHotkey[entry["hotkey"] as! String] = index
             addedSoundsCount++
         }
     }
@@ -153,7 +153,7 @@ class SoundsModel {
             var lineElements = line.componentsSeparatedByString(" ")
             let entry: [String:Any] = [
                 "fileURL": (configURL.URLByDeletingLastPathComponent?.URLByAppendingPathComponent(lineElements[0]))!,
-                "hotKey": lineElements[1],
+                "hotkey": lineElements[1],
                 "startVolume": Float(lineElements[2])!,
                 "startPan": Float(lineElements[3])!,
                 "startReverbMix": Float(lineElements[4])!,
@@ -169,7 +169,7 @@ class SoundsModel {
         let sound = Sound(
             id: addedSoundsCount - 1, // -1 because indexing starts at 0
             fileURL: fileURL,
-            hotKey: "",
+            hotkey: " ",
             startVolume: 0.8,
             startPan: 0.0,
             startReverbPreset: 3,

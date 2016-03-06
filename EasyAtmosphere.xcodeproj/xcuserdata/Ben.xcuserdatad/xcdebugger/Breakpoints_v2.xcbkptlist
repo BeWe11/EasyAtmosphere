@@ -129,53 +129,6 @@
             endingLineNumber = "12"
             landmarkName = "MainViewController"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PathfinderSounds.MainViewController.__deallocating_deinit"
-                  moduleName = "PathfinderSounds"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Ben/Projects/XCode/PathfinderSounds/PathfinderSounds/MainViewController.swift"
-                  timestampString = "477965534.755218"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PathfinderSounds.MainViewController.init (PathfinderSounds.MainViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Swift.Optional&lt;PathfinderSounds.MainViewController&gt;"
-                  moduleName = "PathfinderSounds"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Ben/Projects/XCode/PathfinderSounds/PathfinderSounds/MainViewController.swift"
-                  timestampString = "477965534.755512"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "58">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PathfinderSounds.MainViewController.init (PathfinderSounds.MainViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;PathfinderSounds.MainViewController&gt;"
-                  moduleName = "PathfinderSounds"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Ben/Projects/XCode/PathfinderSounds/PathfinderSounds/MainViewController.swift"
-                  timestampString = "477965534.755812"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -271,6 +224,133 @@
             startingLineNumber = "169"
             endingLineNumber = "169"
             landmarkName = "addSoundFromURL(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EasyAtmosphere/ClippingCircularSlider.swift"
+            timestampString = "478974959.502403"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "rectOfTickMarkAtIndex(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EasyAtmosphere/MainViewController.swift"
+            timestampString = "478981057.123002"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "changePan(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EasyAtmosphere/MainViewController.swift"
+            timestampString = "478981057.123002"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "changePan(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EasyAtmosphere/MainViewController.swift"
+            timestampString = "478983289.63325"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
+            landmarkName = "didPressKey(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EasyAtmosphere.MainViewController.didPressKey (EasyAtmosphere.MainViewController)(Swift.String) -&gt; ()"
+                  moduleName = "EasyAtmosphere"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ben/Projects/XCode/EasyAtmosphere/EasyAtmosphere/MainViewController.swift"
+                  timestampString = "478981267.509675"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "protocol witness for EasyAtmosphere.MainViewDelegate.didPressKey &lt;A where A: EasyAtmosphere.MainViewDelegate&gt; (A)(Swift.String) -&gt; () in conformance EasyAtmosphere.MainViewController : EasyAtmosphere.MainViewDelegate in EasyAtmosphere"
+                  moduleName = "EasyAtmosphere"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ben/Projects/XCode/EasyAtmosphere/EasyAtmosphere/MainViewController.swift"
+                  timestampString = "478981267.509837"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dynamic EasyAtmosphere.MainViewController.didPressKey (EasyAtmosphere.MainViewController)(Swift.String) -&gt; ()"
+                  moduleName = "EasyAtmosphere"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ben/Projects/XCode/EasyAtmosphere/EasyAtmosphere/MainViewController.swift"
+                  timestampString = "478981267.509989"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EasyAtmosphere/MainViewController.swift"
+            timestampString = "478981242.105027"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "addEntryView(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
