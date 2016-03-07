@@ -30,18 +30,27 @@ class MainViewController: NSViewController {
         
 //        defaults.removeObjectForKey("model")
 
-        guard let data = defaults.objectForKey("model") as? NSData else {
+        guard let modelData = defaults.objectForKey("model") as? NSData else {
             model = SoundsModel()
             return
         }
-        guard let loadedModel = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? SoundsModel else {
+        guard let loadedModel = NSKeyedUnarchiver.unarchiveObjectWithData(modelData) as? SoundsModel else {
             model = SoundsModel()
             return
         }
-        model = loadedModel
         
-        for sound in model.sounds.values {
-            addEntryView(sound)
+        guard let orderData = defaults.objectForKey("order") as? NSData else {
+            model = SoundsModel()
+            return
+        }
+        guard let loadedOrder = NSKeyedUnarchiver.unarchiveObjectWithData(orderData) as? [Int] else {
+            model = SoundsModel()
+            return
+        }
+        
+        model = loadedModel
+        for id in loadedOrder {
+            addEntryView(model.sounds[id]!)
         }
     }
 
@@ -145,9 +154,18 @@ class MainViewController: NSViewController {
         chooseHotkeyId = -1
     }
     
+    // Save session when app (main view) closes
     override func viewWillDisappear() {
-        let data = NSKeyedArchiver.archivedDataWithRootObject(model)
-        defaults.setObject(data, forKey: "model")
+        let modelData = NSKeyedArchiver.archivedDataWithRootObject(model)
+        defaults.setObject(modelData, forKey: "model")
+        
+        var order: [Int] = []
+        for entryView in stackView.subviews {
+            order.append(entryView.subviews[0].tag)
+        }
+        let orderData = NSKeyedArchiver.archivedDataWithRootObject(order)
+        defaults.setObject(orderData, forKey: "order")
+        
         defaults.synchronize()
     }
     
