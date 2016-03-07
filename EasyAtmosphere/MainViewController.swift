@@ -34,9 +34,8 @@ class MainViewController: NSViewController {
         }
     }
     
-    
-    func changeVolume(sender: NSSlider) {
-        model.sounds[sender.tag]!.volume = sender.floatValue
+    func playPause(sender: NSButton) {
+        model.sounds[sender.tag]!.playPause()
     }
     
     func changeHotkey(sender: NSButton) {
@@ -50,6 +49,10 @@ class MainViewController: NSViewController {
         Swift.print(sound.pan)
     }
     
+    func changeVolume(sender: NSSlider) {
+        model.sounds[sender.tag]!.volume = sender.floatValue
+    }
+   
     func changeReverbMix(sender: NSSlider) {
         let newReverbMix = (sender.floatValue + 50) % 100
         let sound = model.sounds[sender.tag]!
@@ -59,10 +62,6 @@ class MainViewController: NSViewController {
     
     func changeReverbPreset(sender: NSPopUpButton) {
         model.sounds[sender.tag]!.reverbPreset = sender.indexOfSelectedItem
-    }
-    
-    func playPause(sender: NSButton) {
-        model.sounds[sender.tag]!.playPause()
     }
     
     func delete(sender: NSButton) {
