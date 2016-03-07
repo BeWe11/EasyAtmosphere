@@ -11,10 +11,13 @@ import Cocoa
 
 class MainViewController: NSViewController {
     
-//    let defaults = NSUserDefaults.standardUserDefaults()
+    let defaults = NSUserDefaults.standardUserDefaults()
     var model = SoundsModel()
-    var chooseHotkeyId: Int = -1
     var entryViewById: [Int:NSView] = [:]
+    
+    // Keep ID of hotkey button that has been pushed, -1 means that
+    // no hotkey change is in progress
+    var chooseHotkeyId: Int = -1
     
     @IBOutlet weak var stackView: NSStackView!
     
@@ -23,9 +26,23 @@ class MainViewController: NSViewController {
         
         let view = self.view as! MainView
         view.delegate = self
-        self.nextResponder = view
+        nextResponder = view // For file dragging
         
-        self.model = SoundsModel()
+//        defaults.removeObjectForKey("model")
+
+        guard let data = defaults.objectForKey("model") as? NSData else {
+            model = SoundsModel()
+            return
+        }
+        guard let loadedModel = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? SoundsModel else {
+            model = SoundsModel()
+            return
+        }
+        model = loadedModel
+        
+        for sound in model.sounds.values {
+            addEntryView(sound)
+        }
     }
 
     override var representedObject: AnyObject? {
@@ -128,10 +145,11 @@ class MainViewController: NSViewController {
         chooseHotkeyId = -1
     }
     
-//    override func viewWillDisappear() {
-//        Swift.print("test")
-//        defaults.setObject(model, forKey: "model")
-//    }
+    override func viewWillDisappear() {
+        let data = NSKeyedArchiver.archivedDataWithRootObject(model)
+        defaults.setObject(data, forKey: "model")
+        defaults.synchronize()
+    }
     
 }
 

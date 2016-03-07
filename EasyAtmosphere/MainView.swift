@@ -51,16 +51,13 @@ class MainView: NSView {
     
     override func draggingEntered(sender: NSDraggingInfo) -> NSDragOperation
     {
-        Swift.print("dragging entered")
         if validExtension(sender) {
-            Swift.print("valid extension")
             return NSDragOperation.Copy
         }
         return NSDragOperation.None
     }
     
     override func performDragOperation(sender: NSDraggingInfo) -> Bool {
-        Swift.print("Performing drag operation")
         guard let pboard = sender.draggingPasteboard().propertyListForType("NSFilenamesPboardType") as? NSArray else {
             return false
         }

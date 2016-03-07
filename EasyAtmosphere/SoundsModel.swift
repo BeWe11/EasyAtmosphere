@@ -9,11 +9,11 @@
 import AVFoundation
 
 
-class Sound {
+class Sound: NSObject, NSCoding {
     
-    var id: Int
-    var name: String
-    var hotkey: String
+    var id: Int = 0
+    var name: String = " "
+    var hotkey: String = " "
     var player = AVAudioPlayerNode()
     var engine = AVAudioEngine()
     var reverb = AVAudioUnitReverb()
@@ -21,58 +21,85 @@ class Sound {
     var audioFile = AVAudioFile()
     var volume: Float {
         get {
-            return self.player.volume
+            return player.volume
         }
         set {
-            self.player.volume = newValue
+            player.volume = newValue
         }
     }
     var pan: Float {
         get {
-            return self.player.pan
+            return player.pan
         }
         set {
-            self.player.pan = newValue
+            player.pan = newValue
         }
     }
     var reverbMix: Float {
         get {
-            return self.reverb.wetDryMix
+            return reverb.wetDryMix
         }
         set {
-            self.reverb.wetDryMix = newValue
+            reverb.wetDryMix = newValue
         }
     }
     var reverbPreset: Int {
         get {
-            return self.reverbPresetIndex
+            return reverbPresetIndex
         }
         set {
-            self.reverb.loadFactoryPreset((AVAudioUnitReverbPreset(rawValue: newValue))!)
-            self.reverbPresetIndex = newValue
+            reverb.loadFactoryPreset((AVAudioUnitReverbPreset(rawValue: newValue))!)
+            reverbPresetIndex = newValue
         }
     }
     
     init(id: Int, fileURL: NSURL, hotkey: String, startVolume: Float, startPan: Float, startReverbPreset: Int, startReverbMix: Float) {
+        super.init()
         self.id = id
-        self.name = (fileURL.URLByDeletingPathExtension?.lastPathComponent)! // Better unwrapping
+        name = (fileURL.URLByDeletingPathExtension?.lastPathComponent)! // Better unwrapping
         self.hotkey = hotkey // Maybe make optional
-        self.reverbPreset = startReverbPreset
+        reverbPreset = startReverbPreset
         setupAudio(fileURL)
-        self.volume = startVolume
-        self.pan = startPan
-        self.reverbMix = startReverbMix
+        volume = startVolume
+        pan = startPan
+        reverbMix = startReverbMix
+        player.scheduleFile(audioFile, atTime: nil, completionHandler: handler)
     }
+    
+    required init?(coder: NSCoder) {
+        super.init()
+        id = coder.decodeIntegerForKey("id")
+        let fileURL = coder.decodeObjectForKey("fileURL") as! NSURL
+        name = (fileURL.URLByDeletingPathExtension?.lastPathComponent)! // Better unwrapping
+        hotkey = coder.decodeObjectForKey("hotkey") as! String
+        reverbPreset = coder.decodeIntegerForKey("reverbPreset")
+        setupAudio(fileURL)
+        volume = coder.decodeFloatForKey("volume")
+        pan = coder.decodeFloatForKey("pan")
+        reverbMix = coder.decodeFloatForKey("reverbMix")
+        player.scheduleFile(audioFile, atTime: nil, completionHandler: handler)
+    }
+    
+    func encodeWithCoder(coder: NSCoder) {
+        coder.encodeInteger(id, forKey: "id")
+        coder.encodeObject(audioFile.url, forKey: "fileURL")
+        coder.encodeObject(hotkey, forKey: "hotkey")
+        coder.encodeFloat(volume, forKey: "volume")
+        coder.encodeFloat(pan, forKey: "pan")
+        coder.encodeInteger(reverbPreset, forKey: "reverbPreset")
+        coder.encodeFloat(reverbMix, forKey: "reverbMix")
+    }
+
     
     func setupAudio(fileURL: NSURL) {
         do {
-            self.audioFile = try AVAudioFile(forReading: fileURL)
-            self.engine.attachNode(self.player)
-            self.engine.attachNode(self.reverb)
-            self.engine.connect(self.player, to: self.reverb, format: nil)
-            self.engine.connect(self.reverb, to: self.engine.mainMixerNode, format: nil)
-            self.engine.prepare()
-            try self.engine.start()
+            audioFile = try AVAudioFile(forReading: fileURL)
+            engine.attachNode(player)
+            engine.attachNode(reverb)
+            engine.connect(player, to: reverb, format: nil)
+            engine.connect(reverb, to: engine.mainMixerNode, format: nil)
+            engine.prepare()
+            try engine.start()
         } catch let err as NSError {
             print("Error: " + err.localizedDescription)
         }
@@ -80,29 +107,24 @@ class Sound {
     }
     
     func playPause() {
-        if self.player.playing {
-            Swift.print("1")
-            Swift.print(self.player.playing)
-            self.player.pause()
+        if player.playing {
+            player.pause()
         } else {
-            Swift.print("2")
-            self.player.scheduleFile(self.audioFile, atTime: nil, completionHandler: handler)
-            self.player.play()
-            Swift.print(self.player.playing)
+            player.play()
         }
     }
     
     func handler() {
-        self.player.pause()
-        Swift.print("handler")
+        player.pause()
+        player.scheduleFile(audioFile, atTime: nil, completionHandler: handler)
     }
     
 }
 
 
-class SoundsModel {
+class SoundsModel: NSObject, NSCoding {
     
-    var addedSoundsCount = 0
+    var addedSoundsCount: Int = 0
     var sounds: [Int:Sound] = [:]
     var idByHotkey: [String:Int] = [:]
     static let reverbPresets = [
@@ -121,8 +143,21 @@ class SoundsModel {
         "Large Hall 2"
     ]
     
-    init() {
+    override init() {
+        super.init()
         return
+    }
+    
+    required init?(coder: NSCoder) {
+        addedSoundsCount = coder.decodeIntegerForKey("addedSoundsCount")
+        sounds = coder.decodeObjectForKey("sounds") as! [Int:Sound]
+        idByHotkey = coder.decodeObjectForKey("idByHotkey") as! [String:Int]
+    }
+    
+    func encodeWithCoder(coder: NSCoder) {
+        coder.encodeInteger(addedSoundsCount, forKey: "addedSoundsCount")
+        coder.encodeObject(sounds, forKey: "sounds")
+        coder.encodeObject(idByHotkey, forKey: "idByHotkey")
     }
     
     func addSoundFromURL(fileURL: NSURL) -> Sound {
