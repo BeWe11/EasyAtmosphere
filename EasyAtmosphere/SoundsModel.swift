@@ -103,9 +103,9 @@ class Sound {
 class SoundsModel {
     
     var addedSoundsCount = 0
-    var sounds: [Sound] = []
+    var sounds: [Int:Sound] = [:]
     var idByHotkey: [String:Int] = [:]
-    let reverbPresets = [
+    static let reverbPresets = [
         "Small Room",
         "Medium Room",
         "Large Room",
@@ -121,53 +121,57 @@ class SoundsModel {
         "Large Hall 2"
     ]
     
-    init(configURL: NSURL) {
-        let entries = readConfig(configURL)
-        for (index, entry) in entries.enumerate() {
-            self.sounds.append(Sound(id: index,
-                                     fileURL: entry["fileURL"] as! NSURL,
-                                     hotkey: entry["hotkey"] as! String,
-                                     startVolume: entry["startVolume"] as! Float,
-                                     startPan: entry["startPan"] as! Float,
-                                     startReverbPreset: entry["startReverbPreset"] as! Int,
-                                     startReverbMix: entry["startReverbMix"] as! Float))
-            self.idByHotkey[entry["hotkey"] as! String] = index
-            addedSoundsCount++
-        }
+//    init(configURL: NSURL) {
+//        let entries = readConfig(configURL)
+//        for (index, entry) in entries.enumerate() {
+//            self.sounds[index] = Sound(id: index,
+//                                       fileURL: entry["fileURL"] as! NSURL,
+//                                       hotkey: entry["hotkey"] as! String,
+//                                       startVolume: entry["startVolume"] as! Float,
+//                                       startPan: entry["startPan"] as! Float,
+//                                       startReverbPreset: entry["startReverbPreset"] as! Int,
+//                                       startReverbMix: entry["startReverbMix"] as! Float)
+//            self.idByHotkey[entry["hotkey"] as! String] = index
+//            addedSoundsCount++
+//        }
+//    }
+    
+    init() {
+        return
     }
     
-    func readConfig(configURL: NSURL) -> [[String:Any]] {
-        var fileContent: String
-        do {
-            fileContent = try String(contentsOfURL: configURL, encoding: NSUTF8StringEncoding)
-        } catch let err as NSError {
-            print("Error: " + err.localizedDescription)
-            fileContent = ""
-        }
-        let trimmed = fileContent.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        let lines = trimmed.componentsSeparatedByString("\n")
-        
-        var entries = [[String:Any]]()
-        
-        for line in lines {
-            var lineElements = line.componentsSeparatedByString(" ")
-            let entry: [String:Any] = [
-                "fileURL": (configURL.URLByDeletingLastPathComponent?.URLByAppendingPathComponent(lineElements[0]))!,
-                "hotkey": lineElements[1],
-                "startVolume": Float(lineElements[2])!,
-                "startPan": Float(lineElements[3])!,
-                "startReverbMix": Float(lineElements[4])!,
-                "startReverbPreset": Int(lineElements[5])!
-            ]
-            entries.append(entry)
-        }
-        return entries
-    }
+//    func readConfig(configURL: NSURL) -> [[String:Any]] {
+//        var fileContent: String
+//        do {
+//            fileContent = try String(contentsOfURL: configURL, encoding: NSUTF8StringEncoding)
+//        } catch let err as NSError {
+//            print("Error: " + err.localizedDescription)
+//            fileContent = ""
+//        }
+//        let trimmed = fileContent.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+//        let lines = trimmed.componentsSeparatedByString("\n")
+//        
+//        var entries = [[String:Any]]()
+//        
+//        for line in lines {
+//            var lineElements = line.componentsSeparatedByString(" ")
+//            let entry: [String:Any] = [
+//                "fileURL": (configURL.URLByDeletingLastPathComponent?.URLByAppendingPathComponent(lineElements[0]))!,
+//                "hotkey": lineElements[1],
+//                "startVolume": Float(lineElements[2])!,
+//                "startPan": Float(lineElements[3])!,
+//                "startReverbMix": Float(lineElements[4])!,
+//                "startReverbPreset": Int(lineElements[5])!
+//            ]
+//            entries.append(entry)
+//        }
+//        return entries
+//    }
     
     func addSoundFromURL(fileURL: NSURL) -> Sound {
-        addedSoundsCount++
+        let id = addedSoundsCount
         let sound = Sound(
-            id: addedSoundsCount - 1, // -1 because indexing starts at 0
+            id: id,
             fileURL: fileURL,
             hotkey: " ",
             startVolume: 0.8,
@@ -175,8 +179,14 @@ class SoundsModel {
             startReverbPreset: 3,
             startReverbMix: 0.0
         )
-        sounds.append(sound)
+        sounds[id] = sound
+        addedSoundsCount++
         return sound
+    }
+    
+    func deleteSound(id: Int) {
+        idByHotkey.removeValueForKey(sounds[id]!.hotkey)
+        sounds.removeValueForKey(id)
     }
     
 }

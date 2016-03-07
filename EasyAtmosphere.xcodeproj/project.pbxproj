@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B535C91C1C8DD29D00F39054 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535C91B1C8DD29D00F39054 /* EntryView.swift */; };
 		B5528B9B1C8C755500EA124C /* ClippingCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5528B9A1C8C755500EA124C /* ClippingCircularSlider.swift */; };
 		B5775ABF1C656228003FE321 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5775ABE1C656228003FE321 /* MainView.swift */; };
 		B5775AC41C656AB2003FE321 /* SoundsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5775AC31C656AB2003FE321 /* SoundsModel.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B535C91B1C8DD29D00F39054 /* EntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryView.swift; path = ../EntryView.swift; sourceTree = "<group>"; };
 		B5528B9A1C8C755500EA124C /* ClippingCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClippingCircularSlider.swift; sourceTree = "<group>"; };
 		B5775ABE1C656228003FE321 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B5775AC31C656AB2003FE321 /* SoundsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsModel.swift; sourceTree = "<group>"; };
@@ -102,8 +104,9 @@
 			children = (
 				B5F2AEDC1C63A57600948FA1 /* AppDelegate.swift */,
 				B5F2AEDE1C63A57600948FA1 /* MainViewController.swift */,
-				B5528B9A1C8C755500EA124C /* ClippingCircularSlider.swift */,
 				B5775ABE1C656228003FE321 /* MainView.swift */,
+				B5528B9A1C8C755500EA124C /* ClippingCircularSlider.swift */,
+				B535C91B1C8DD29D00F39054 /* EntryView.swift */,
 				B5775AC31C656AB2003FE321 /* SoundsModel.swift */,
 				B5F2AEE21C63A57600948FA1 /* Main.storyboard */,
 				B5F2AEE51C63A57600948FA1 /* Info.plist */,
@@ -264,6 +267,7 @@
 				B5775AC41C656AB2003FE321 /* SoundsModel.swift in Sources */,
 				B5775ABF1C656228003FE321 /* MainView.swift in Sources */,
 				B5F2AEDD1C63A57600948FA1 /* AppDelegate.swift in Sources */,
+				B535C91C1C8DD29D00F39054 /* EntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,6 @@ class MainView: NSView {
         super.init(coder: coder)
         let draggedTypes = ["NSFilenamesPboardType"]
         registerForDraggedTypes(draggedTypes)
-        Swift.print(self.registeredDraggedTypes)
     }
     
     func validExtension(drag: NSDraggingInfo) -> Bool {
