@@ -1,0 +1,7 @@
+-fix reverb slider
+-play button icon
+-separate backgrounds and foreground sounds
+-implement save/load/delete
+-at fist start display “drag here”
+-if window becomes to wide -> more columns
+-scheduleFile completionHandler seems to be bugged, use scheduleBuffer instead
